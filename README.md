@@ -52,8 +52,8 @@ Follow these steps to set up and run the project on your local machine.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/stock_prediction_project.git
-cd stock_prediction_project
+git clone https://github.com/VanshK123/StockPredictor.git
+cd StockPredictor
 ```
 
 ### 2. Set Up a Virtual Environment
@@ -134,6 +134,12 @@ python scripts/main.py
 ```bash
 Enter the number of S&P 500 companies to process: 3
 ```
+4. **Input the Number of Epochs**: You will also be prompted to enter the number of epochs to use for training the model (e.g., 20):
+
+```bash
+Enter the number of epochs for model training: 20
+```
+
 
 The program will then fetch stock data for the selected companies, preprocess it, train a Transformer-based model, and output the stock price predictions along with plots showing actual vs. predicted prices.
 

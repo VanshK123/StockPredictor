@@ -15,14 +15,20 @@ def main():
         print("Invalid input! Defaulting to 1 company.")
         num_companies = 1
 
+    # Ask the user how many epochs to use for training the model
+    try:
+        num_epochs = int(input("Enter the number of epochs for model training: "))
+    except ValueError:
+        print("Invalid input! Defaulting to 10 epochs.")
+        num_epochs = 10
+
     # Get the chosen number of S&P 500 companies
     stocks = get_sp500_companies(num_companies=num_companies)
     print(f"Selected stocks: {stocks}")
-    
+
     start_date = '2010-01-01'
     end_date = '2023-10-01'
     seq_length = 60
-    num_epochs = 10
 
     for stock_symbol in stocks:
         print(f"Processing {stock_symbol}...")
