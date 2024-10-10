@@ -8,7 +8,17 @@ from sklearn.preprocessing import StandardScaler
 from torch.utils.data import DataLoader, TensorDataset
 
 def main():
-    stocks = get_sp500_companies(num_companies=1)
+    # Ask the user how many S&P 500 companies they want to process
+    try:
+        num_companies = int(input("Enter the number of S&P 500 companies to process: "))
+    except ValueError:
+        print("Invalid input! Defaulting to 1 company.")
+        num_companies = 1
+
+    # Get the chosen number of S&P 500 companies
+    stocks = get_sp500_companies(num_companies=num_companies)
+    print(f"Selected stocks: {stocks}")
+    
     start_date = '2010-01-01'
     end_date = '2023-10-01'
     seq_length = 60
