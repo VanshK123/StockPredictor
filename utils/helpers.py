@@ -1,5 +1,10 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import os
+
+# Ensure the 'outputs' directory exists
+if not os.path.exists('outputs'):
+    os.makedirs('outputs')
 
 def create_sequences(X, y, seq_length=60):
     sequences = []
@@ -27,6 +32,6 @@ def plot_predictions(stock_symbol, actuals, predictions):
     plt.title(f'Actual vs Predicted Stock Prices for {stock_symbol}')
     plt.xlabel('Time')
     plt.ylabel('Price')
-    plt.savefig(f'predicted_vs_actual_{stock_symbol}.png')
+    plt.savefig(f'outputs/predicted_vs_actual_{stock_symbol}.png')
     plt.close()
     print(f"Plot saved as 'predicted_vs_actual_{stock_symbol}.png'")

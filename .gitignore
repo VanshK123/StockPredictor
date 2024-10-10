@@ -7,6 +7,3 @@ venv/
 
 # Ignore environment variables
 .env
-
-# Ignore generated graphs
-*.png

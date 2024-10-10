@@ -145,6 +145,13 @@ The program will then fetch stock data for the selected companies, preprocess it
 
 ---
 
+## Sample Output
+
+Here is a sample output graph showing the actual vs. predicted stock prices for a stock with 50 epochs and batch size of 32:
+
+![Predicted vs Actual Stock Prices](outputs/predicted_vs_actual_PARA.png)
+
+
 ## Code Explanation
 
 ### 1. Data Collection (from `fetch_data.py`)
